@@ -376,7 +376,7 @@ function createBattleScene() {
   //Draw the buttons
   textSize(40);
   fill(248,228,250,255);
-  rect(22,360,508,150);
+  rect(22,360,508,150, 10);
   rect(230,360,300,150);
   
   fill(0,0,0);
@@ -395,19 +395,19 @@ function createBattleScene() {
   
   strokeWeight(6);
   fill(248,228,250,255);
-  rect(260, 380, 120, 50);
+  rect(260, 380, 120, 50, 10);
   fill(0,0,0);
   text("FIGHT",287,415);
   fill(248,228,250,255);
-  rect(395, 380, 100, 50);
+  rect(395, 380, 100, 50, 10);
   fill(0,0,0);
   text("PKMN",416,415);
   fill(248,228,250,255);
-  rect(265, 435, 110, 50);
+  rect(265, 435, 110, 50, 10);
   fill(0,0,0);
   text("ITEM",295,470);
   fill(248,228,250,255);
-  rect(400, 435, 90, 50);
+  rect(400, 435, 90, 50, 10);
   fill(0,0,0);
   text("RUN",423,470);
 }
