@@ -65,9 +65,14 @@ function mainMenuScreen(){
   image(bulbasaurFacingCamera,200,140,150,150);
   image(charmanderFacingCamera,375,145,150,130);
   fill(255, 255, 255);
-  rect(110,400,335,50);
+  rect(110,350,335,50,10);
   fill(0,0,0);
-  text("Click Here to Start", 120, 440);
+  text("Click Here to Start", 120, 390);
+  fill(255, 255, 255);
+  rect(110,415,335,50,10);
+  fill(0,0,0);
+  textSize(42);
+  text("Click Here to See Credits", 118, 455);
 }
 
 //First Scene Enemy Select
@@ -102,8 +107,11 @@ function pickEnemyScreen() {
 //The Big "On Mouse Click" Function
 function mouseClicked() {
 //----------------------- On Main Menu Scene
-  if(mouseX > 110 && mouseX < 445 && mouseY > 400 && mouseY < 450 && battlePhase == "Main Menu"){
+  if(mouseX > 110 && mouseX < 445 && mouseY > 350 && mouseY < 400 && battlePhase == "Main Menu"){
     pickEnemyScreen();
+  }
+  else if(mouseX > 110 && mouseX < 445 && mouseY > 415 && mouseY < 465 && battlePhase == "Main Menu"){
+    creditsScreen();
   }
   
 //----------------------- On Select Enemy Scene
@@ -956,6 +964,9 @@ function draw() {
     menuMusic.play();
   }
   else{
-  }
-  
+  } 
+}
+
+function creditsScreen() {
+    //Play Credits
 }
