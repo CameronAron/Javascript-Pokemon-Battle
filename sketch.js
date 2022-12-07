@@ -21,6 +21,7 @@ let damageToPlayer;
 let enemyMoveVar;
 //let mouseCursor;
 
+
 //Image preload Function
 function preload(){
   squirtleFacingAway = loadImage("images/squirtleFacingAway.png");
@@ -35,6 +36,7 @@ function preload(){
   menuMusic = loadSound('assets/menuMusic.mp3');
   winMusic = loadSound('assets/winMusic.mp3');
   //mouseCursor = loadImage("images/pokeballCursor.png");
+  credits = loadImage("images/credits.mp4");
 }
 
 //Start Function
@@ -62,7 +64,7 @@ function mainMenuScreen(){
   textFont(pokeFont);
   text("Welcome to 'P5JS Pokemon'!",60,100);
   image(squirtleFacingCamera,40,150,130,120);
-  image(bulbasaurFacingCamera,200,140,150,150);
+  image(bulbasaurFacingCamera,200,140,130,130);
   image(charmanderFacingCamera,375,145,150,130);
   fill(255, 255, 255);
   rect(110,350,335,50,10);
@@ -98,7 +100,7 @@ function pickEnemyScreen() {
   rect(30,240,150,140);
   image(squirtleFacingCamera,40,250,130,120);
   rect(200,240,150,140);
-  image(bulbasaurFacingCamera,200,240,150,150);
+  image(bulbasaurFacingCamera,200,240,130,130);
   rect(375,240,150,140);
   image(charmanderFacingCamera,375,245,150,130);
   player = squirtleFacingAway;
@@ -541,7 +543,7 @@ function changePokemon(){
   rect(30,240,150,140);
   image(squirtleFacingCamera,40,250,130,120);
   rect(200,240,150,140);
-  image(bulbasaurFacingCamera,200,240,150,150);
+  image(bulbasaurFacingCamera,200,240,130,130);
   rect(375,240,150,140);
   image(charmanderFacingCamera,375,245,150,130);
 }
@@ -908,7 +910,7 @@ function pokemonFainted(){
     rect(30,240,150,140);
     image(squirtleFacingCamera,40,250,130,120);
     rect(200,240,150,140);
-    image(bulbasaurFacingCamera,200,240,150,150);
+    image(bulbasaurFacingCamera,200,240,130,130);
     rect(375,240,150,140);
     image(charmanderFacingCamera,375,245,150,130);
   }
@@ -969,4 +971,10 @@ function draw() {
 
 function creditsScreen() {
     //Play Credits
+  battlePhase = "credits";
+  console.log("on credits");
+  strokeWeight(6);
+  fill(248,228,250,255);
+  rect(0, 0, 550, 520);
+  image(credits, 0,0);
 }
