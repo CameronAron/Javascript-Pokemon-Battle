@@ -20,6 +20,9 @@ let damageToEnemy;
 let damageToPlayer;
 let enemyMoveVar;
 //let mouseCursor;
+let vid;
+let playing = true;
+let img;
 
 
 //Image preload Function
@@ -36,7 +39,12 @@ function preload(){
   menuMusic = loadSound('assets/menuMusic.mp3');
   winMusic = loadSound('assets/winMusic.mp3');
   //mouseCursor = loadImage("images/pokeballCursor.png");
-  credits = loadImage("images/credits.mp4");
+  //credits = loadImage("images/credits.mp4");
+  vid = createVideo("images/credits.mp4");
+  vid.size(550, 485);
+  vid.volume(0);
+  vid.loop();
+  vid.hide();
 }
 
 //Start Function
@@ -965,8 +973,13 @@ function draw() {
   else if(battlePhase == "Main Menu" && !menuMusic.isPlaying()){
     menuMusic.play();
   }
+  else if(battlePhase == "credits"){
+    img = vid.get();
+    image(img, 0, 0);  
+
+  }
   else{
-  } 
+  }   
 }
 
 function creditsScreen() {
@@ -976,5 +989,12 @@ function creditsScreen() {
   strokeWeight(6);
   fill(248,228,250,255);
   rect(0, 0, 550, 520);
-  image(credits, 0,0);
+  fill(0,0,0);
+  text("Press Space To Go Back", 100,510);
+}
+
+function keyPressed() {
+  if (keyCode === 32 && battlePhase == "credits") {
+    mainMenuScreen();
+  }
 }
