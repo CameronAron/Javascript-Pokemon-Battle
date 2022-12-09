@@ -485,21 +485,21 @@ function timeToFight(){
   
   
   if(player == squirtleFacingAway){
-    fill(248,228,250,255);
+    fill(24, 150, 240);
     rect(22, 456,320, 53);
     fill(0, 0, 0);
     ellipse(47, 485, 10);
     text(" W A T E R   G U N", 67, 500);
   }
   else if (player == bulbasaurFacingAway){
-    fill(248,228,250,255);
+    fill(34, 102, 11);
     rect(22, 456,300, 53);
     fill(0, 0, 0);
     ellipse(47, 485, 10);
     text(" V I N E   W H I P", 67, 500);
   }
   else if (player == charmanderFacingAway){
-    fill(248,228,250,255);
+    fill(222, 46, 27);
     rect(22, 456,210, 53);
     fill(0, 0, 0);
     ellipse(47, 485, 10);
