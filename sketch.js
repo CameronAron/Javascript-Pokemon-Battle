@@ -982,8 +982,8 @@ function draw() {
   }   
 }
 
+//The player views the credits
 function creditsScreen() {
-    //Play Credits
   battlePhase = "credits";
   console.log("on credits");
   strokeWeight(6);
